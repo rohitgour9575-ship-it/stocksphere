@@ -5,7 +5,7 @@ workflows:
     instance_type: mac_mini_m2
 
     integrations:
-      app_store_connect: StockSpheres # Codemagic UI me jo App Store Connect integration name create kiya hai wo yahan dalein (e.g. StockSpheres ya Jambit)
+      app_store_connect: stocksphere
 
     environment:
       flutter: stable
