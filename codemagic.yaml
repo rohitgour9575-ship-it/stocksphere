@@ -41,9 +41,11 @@ workflows:
           if [ -f /Users/builder/export_options.plist ]; then
             EXPORT_PLIST_FLAG="--export-options-plist=/Users/builder/export_options.plist"
           fi
+          # App Store Connect requires bundle version higher than previous version (previously uploaded was 2).
+          BUILD_NUM=$((${BUILD_NUMBER:-1} + 10))
           flutter build ipa --release \
             --build-name=1.0.0 \
-            --build-number=${BUILD_NUMBER:-1} \
+            --build-number=$BUILD_NUM \
             $EXPORT_PLIST_FLAG
 
     artifacts:
