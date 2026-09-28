@@ -1,0 +1,3 @@
+# stocksphere
+
+Stock Spheres application.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stock Spheres</string>
+    <string name="facebook_app_id">1497691088217651</string>
+    <!-- Meta Dashboard → Settings → Advanced → Client token -->
+    <string name="facebook_client_token">e58cb14676dd7a597f43eba69f3a6c43</string>
+    <string name="fb_login_protocol_scheme">fb1497691088217651</string>
+</resources>

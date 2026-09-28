@@ -1,0 +1,50 @@
+name: stock_spheres
+description: Stock Spheres - trading app for Android and iOS.
+publish_to: 'none'
+
+version: 1.0.0+8
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  razorpay_flutter: ^1.4.0
+  webview_flutter: ^4.13.0
+  webview_flutter_android: ^4.10.0
+  webview_flutter_wkwebview: ^3.23.0
+  webview_flutter_web: ^0.2.3
+  webview_flutter_platform_interface: ^2.15.0
+  permission_handler: ^12.0.1
+  facebook_app_events: ^0.30.1
+  url_launcher: ^6.3.2
+  image_picker: ^1.2.3
+  firebase_core: ^4.12.1
+  firebase_messaging: ^16.4.3
+  flutter_local_notifications: ^22.0.1
+  path_provider: ^2.1.6
+  share_plus: ^13.2.1
+  http: ^1.6.0
+  app_links: ^7.0.0
+  google_sign_in: 6.2.2
+  connectivity_plus: ^7.3.1
+  in_app_update: ^4.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/app_icon.png
+  min_sdk_android: 21
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/app_icon.png
