@@ -35,12 +35,16 @@ workflows:
         script: |
           xcode-project use-profiles
 
-      - name: Build IPA with Flutter
+      - name: Build iOS IPA
         script: |
+          EXPORT_PLIST_FLAG=""
+          if [ -f /Users/builder/export_options.plist ]; then
+            EXPORT_PLIST_FLAG="--export-options-plist=/Users/builder/export_options.plist"
+          fi
           flutter build ipa --release \
             --build-name=1.0.0 \
-            --build-number=$((${BUILD_NUMBER:-0} + 8)) \
-            --export-options-plist=/Users/builder/export_options.plist
+            --build-number=${BUILD_NUMBER:-1} \
+            $EXPORT_PLIST_FLAG
 
     artifacts:
       - build/ios/ipa/*.ipa
