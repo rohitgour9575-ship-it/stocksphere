@@ -41,10 +41,13 @@ workflows:
           if [ -f /Users/builder/export_options.plist ]; then
             EXPORT_PLIST_FLAG="--export-options-plist=/Users/builder/export_options.plist"
           fi
+          # Read version name from pubspec.yaml (e.g. 1.0.1)
+          BUILD_NAME=$(sed -nE 's/^version: ([0-9]+\.[0-9]+\.[0-9]+).*/\1/p' pubspec.yaml)
+          BUILD_NAME=${BUILD_NAME:-1.0.1}
           # App Store Connect requires bundle version higher than previous version (previously uploaded was 2).
           BUILD_NUM=$((${BUILD_NUMBER:-1} + 10))
           flutter build ipa --release \
-            --build-name=1.0.0 \
+            --build-name=$BUILD_NAME \
             --build-number=$BUILD_NUM \
             $EXPORT_PLIST_FLAG
 

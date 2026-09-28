@@ -2,7 +2,7 @@ name: stock_spheres
 description: Stock Spheres - trading app for Android and iOS.
 publish_to: 'none'
 
-version: 1.0.0+10
+version: 1.0.1+10
 
 environment:
   sdk: ^3.10.1
