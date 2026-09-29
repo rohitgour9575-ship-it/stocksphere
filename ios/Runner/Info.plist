@@ -45,6 +45,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<!-- Camera and Microphone Permissions -->
 	<key>NSCameraUsageDescription</key>
 	<string>Stock Spheres needs access to your camera to take photos and scan documents.</string>
